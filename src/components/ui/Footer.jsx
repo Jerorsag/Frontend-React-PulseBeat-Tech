@@ -20,7 +20,11 @@ const Footer = () => {
             </div>
 
         {/* Copyright Section */}
-            <p className="small mb-0">&copy; 2025 PulseBeat Tech</p>
+            <p className="small mb-0">&copy; 2025 PulseBeat Tech. Developed by  
+                <strong><a href="https://jerorsag.github.io/Portfolio/" target="_blank" className="text-white text-decoration-none mx-1"> 
+                Jeronimo Rodriguez Sepulveda
+            </a></strong>
+            </p>
         </div>
     </footer>
   )

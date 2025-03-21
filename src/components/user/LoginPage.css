@@ -53,6 +53,8 @@
 .login-footer p {
     margin: 5px 0;
     font-size: 14px;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .login-footer a {

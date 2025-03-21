@@ -4,6 +4,7 @@ import api from "../../api"
 import Error from "../ui/Error"
 import { useLocation, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../context/AuthContext"
+import { Link } from "react-router-dom"
 
 const LoginPage = () => {
 
@@ -69,7 +70,7 @@ const LoginPage = () => {
         </form>
         <div className="login-footer">
           <p><a href="#">Forgot Password?</a></p>
-          <p>Don't have an account? <a href="#">Sign up</a></p>
+          <p>Don't have an account? <Link to="/register">Sign up</Link></p>
         </div>
       </div>
     </div>
