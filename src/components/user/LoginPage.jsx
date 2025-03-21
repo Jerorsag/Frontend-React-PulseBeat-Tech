@@ -40,9 +40,21 @@ const LoginPage = () => {
       navigate(from, {replace:true});
     })
     .catch(err => {
-      console.log(err.message)
-      setError(err.message)
-      setLoading(false)
+      console.log(err.message);
+      
+      if (err.response?.status === 401) {
+        setError("Invalid username or password. Please check your credentials and try again.");
+      } else if (err.response?.status === 404) {
+        setError("Account not found. Please verify your username or create a new account.");
+      } else if (err.response?.status === 429) {
+        setError("Too many login attempts. Please try again later.");
+      } else if (err.message.includes("Network Error")) {
+        setError("Unable to connect to the server. Please check your internet connection.");
+      } else {
+        setError("Login failed. Please try again or contact support if the problem persists.");
+      }
+      
+      setLoading(false);
     })
   }
 

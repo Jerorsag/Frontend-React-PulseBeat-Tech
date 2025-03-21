@@ -12,6 +12,7 @@ import ProtectedRoutes from "./components/ui/ProtectedRoutes";
 import { AuthProvider } from "./context/AuthContext";
 import UserProfilePage from "./components/user/UserProfilePage";
 import PaymentStatusPage from "./components/payments/PaymentStatusPage";
+import RegisterPage from "./components/user/Register Page";
 
 const App = () => {
 
@@ -44,6 +45,7 @@ const App = () => {
                 <CheckoutPage />
               </ProtectedRoutes>} />
             <Route path="login" element={<LoginPage />} />
+            <Route path="register" element={<RegisterPage/>} />
             <Route path="profile" element={<UserProfilePage />} />
             <Route path="payment-status" element={<PaymentStatusPage setNumberCartItems/> } />
             <Route path="*" element={<NotFoundPage />} />
